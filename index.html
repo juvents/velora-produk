@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velora – Katalog Sepatu</title>
+<meta name="description" content="Katalog sepatu Toko Velora: Runner, Classic, Urban Trek, dan Trail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#atas" aria-label="Velora, ke atas">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-copy"><strong>VELORA</strong><small>QUALITY SHOES, BETTER STEPS</small></span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <a href="#katalog">Katalog</a>
+      <a href="#harga">Daftar harga</a>
+      <a href="#kontak">Kontak</a>
+      <button class="btn sm" data-order="runner" type="button">Pesan sekarang</button>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Quality shoes,<br>better steps.</h1>
+        <p class="lead">4 pilihan sepatu untuk setiap langkahmu.</p>
+        <div class="cta">
+          <a class="btn" href="#katalog">Lihat katalog</a>
+          <a class="btn ghost" href="#harga">Daftar harga</a>
+        </div>
+      </div>
+      <div class="arch"><img src="img/runner.webp" alt="Velora Runner, sepasang sepatu lari warna merah dan biru toska"></div>
+    </div>
+    <div class="wrap quick-wrap"><nav class="quick" id="quick" aria-label="Pilih produk"></nav></div>
+  </section>
+
+  <section class="catalog" id="katalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Katalog sepatu Velora</h2>
+        <p>Dari lari harian sampai jalur berbatu, pilih yang paling cocok untuk langkahmu.</p>
+      </div>
+      <div id="items"></div>
+    </div>
+  </section>
+
+  <section class="prices" id="harga">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Daftar harga dan pemesanan</h2>
+        <p>Pilih sepatu, isi ukuran, lalu kirim pesananmu ke Toko Velora.</p>
+      </div>
+      <div class="plist" id="plist"></div>
+      <p class="note">Harga per pasang. Ukuran dan pilihan warna mengikuti tiap produk.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="kontak">
+  <div class="wrap">
+    <div>
+      <div class="brand" aria-label="Velora, Quality Shoes, Better Steps">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-copy"><strong>VELORA</strong><small>QUALITY SHOES, BETTER STEPS</small></span>
+      </div>
+    </div>
+    <div>
+      <p>Ikuti kami</p>
+      <div class="social-links" aria-label="Media sosial Velora">
+        <a href="https://instagram.com/tokovelora" target="_blank" rel="noopener noreferrer" aria-label="Instagram Velora" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="17.5" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://www.facebook.com/tokovelora" target="_blank" rel="noopener noreferrer" aria-label="Facebook Velora" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-fill" d="M13.6 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V13h2.8v8z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@tokovelora" target="_blank" rel="noopener noreferrer" aria-label="TikTok Velora" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-fill" d="M19.2 8.2a6.7 6.7 0 0 1-4-1.3v8.2a5.7 5.7 0 1 1-5-5.7v3.2a2.5 2.5 0 1 0 1.8 2.4V3h3.2c.2 2 1.8 3.6 4 3.8z"/></svg>
+        </a>
+      </div>
+      <a class="ig" href="https://instagram.com/tokovelora" target="_blank" rel="noopener noreferrer">@tokovelora</a>
+    </div>
+    <div class="copy">© 2026 Toko Velora</div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <form class="dlg" id="form" method="dialog">
+    <h2 id="dlgTitle">Pesan sepatu</h2>
+    <p class="sub">Isi data di bawah, pesananmu akan dikirim lewat WhatsApp.</p>
+    <div class="f"><label for="fProd">Produk</label><select id="fProd"></select></div>
+    <div class="two">
+      <div class="f"><label for="fSize">Ukuran</label><select id="fSize"></select></div>
+      <div class="f"><label for="fQty">Jumlah (pasang)</label><input id="fQty" type="number" min="1" max="20" value="1" inputmode="numeric"></div>
+    </div>
+    <div class="f"><label for="fColor">Warna</label><input id="fColor" type="text" autocomplete="off"></div>
+    <div class="f"><label for="fName">Nama kamu</label><input id="fName" type="text" autocomplete="name" placeholder="Nama lengkap"></div>
+    <div class="total"><span>Total</span><b id="fTotal">Rp 0</b></div>
+    <div class="acts">
+      <button class="btn" type="submit" id="send">Kirim lewat WhatsApp</button>
+      <button class="btn ghost" type="button" id="close">Batal</button>
+    </div>
+    <p class="toast" id="toast" role="status"></p>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
